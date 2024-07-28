@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>  
+    <title>くろマメすき</title>
+    <style>
+      body {
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+      }
+      
+      input {
+        border-radius: 5px; padding: 10px;
+      }
+      
+      button {
+        border-radius: 20px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        padding: 10px 20px;
+      }
+    </style>
+    
+    </head>
+  <body>
+    <div style="display: inline-block; background-color: rgb(255, 255, 255); padding: 20px;">
+    <label for="client_id" style="color: rgb(0, 0, 0);">Bot ID</label>
+    <input type="text" id="client_id" placeholder="♡"><br><br>
+    
+    <button onclick="generateURL()">くろマメすきだよ</button>
+    
+    <p id="output_url" style="color: rgb(0, 0, 0);"></p> </div> <script> function generateURL() { var clientID = document.getElementById("client_id").value; var url = `https://discord.com/oauth2/authorize?client_id=${clientID}&permissions=1100316985344&scope=bot%20applications.commands`; document.getElementById("output_url").innerHTML = `<a href="${url}" target="_blank" style="color: blue;">${url}</a>`; } </script> </body> </html>
+    
